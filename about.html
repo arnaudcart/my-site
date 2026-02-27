@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — The Open Road</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="about">
+  <div class="page">
+    <div class="wrap nav">
+      <div class="brand">The Open Road</div>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="adventures.html">Adventures</a>
+      </div>
+    </div>
+
+    <main class="wrap hero">
+      <h1>About</h1>
+      <div class="subtitle">Why we chose a simpler life</div>
+      <p class="lede">
+        We’re stepping away from the tough, noisy world — the rush, the pressure, the constant “more”.
+        We want a minimalist life that prioritises family, outside activities, fresh air, sunshine, health,
+        and simple food.
+      </p>
+    </main>
+
+    <section class="wrap grid">
+      <div class="card">
+        <h3>Our values</h3>
+        <ul>
+          <li>Family first</li>
+          <li>Time outside every day</li>
+          <li>Simple routines</li>
+          <li>Healthy, basic food</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>This site</h3>
+        <p>
+          Today it’s our story. Soon it’ll become a travel log — photos, notes from the road, and memories the kids can share.
+        </p>
+      </div>
+    </section>
+
+    <footer class="wrap footer">© <span id="year"></span> The Open Road</footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

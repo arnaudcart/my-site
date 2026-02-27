@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adventures — The Open Road</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="adventures">
+  <div class="page">
+    <div class="wrap nav">
+      <div class="brand">The Open Road</div>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="adventures.html">Adventures</a>
+      </div>
+    </div>
+
+    <main class="wrap hero">
+      <h1>Adventures</h1>
+      <div class="subtitle">Coming soon</div>
+      <p class="lede">
+        This page will become our travel timeline — places, routes, favourite hikes, and little moments.
+        For now, it’s a placeholder while we build.
+      </p>
+
+      <div class="ctaRow">
+        <a class="btn primary" href="index.html">Back home</a>
+      </div>
+    </main>
+
+    <footer class="wrap footer">© <span id="year"></span> The Open Road</footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
