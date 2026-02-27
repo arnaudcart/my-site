@@ -1,33 +1,60 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>The Open Road</title>
-<link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Open Road</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body class="home">
+  <div class="page">
+    <div class="wrap nav">
+      <div class="brand">The Open Road</div>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="adventures.html">Adventures</a>
+      </div>
+    </div>
 
-<nav class="nav">
-  <div class="logo">The Open Road</div>
-  <div class="links">
-    <a href="about.html">About</a>
-    <a href="#">Adventures</a>
-    <a href="#">Gallery</a>
-    <a href="#">Journal</a>
+    <main class="wrap hero">
+      <h1>The Open Road</h1>
+      <div class="subtitle">A new life…</div>
+      <p class="lede">
+        Leaving the rat race behind and choosing a minimalist life — more family time, fresh air, outside adventures,
+        healthy simple food, and the warmth of the sun.
+      </p>
+
+      <div class="ctaRow">
+        <a class="btn primary" href="about.html">Read our story</a>
+        <a class="btn" href="adventures.html">See adventures</a>
+      </div>
+    </main>
+
+    <section class="wrap grid">
+      <div class="card">
+        <h3>Why we’re doing this</h3>
+        <p>
+          We want a calmer, healthier rhythm — less stuff, more moments. Nature, movement, and time together.
+        </p>
+      </div>
+      <div class="card">
+        <h3>What’s coming</h3>
+        <ul>
+          <li>Travel journal posts</li>
+          <li>Kids’ photo gallery</li>
+          <li>Simple living tips & routines</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="wrap footer">
+      © <span id="year"></span> The Open Road
+    </footer>
   </div>
-</nav>
 
-<header class="hero">
-  <div class="overlay">
-    <h1>The Open Road</h1>
-    <p class="subtitle">A new life...</p>
-    <p class="intro">
-      Leaving the noise behind. Choosing family, sunlight, fresh air and a simpler way of living.
-    </p>
-  </div>
-</header>
-
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
