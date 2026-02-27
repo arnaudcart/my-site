@@ -1,59 +1,152 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: system-ui, -apple-system, sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&display=swap");
+
+:root{
+  --max: 1100px;
+  --text: rgba(255,255,255,.92);
+  --muted: rgba(255,255,255,.78);
+  --glass: rgba(10, 14, 20, .35);
+  --border: rgba(255,255,255,.14);
 }
 
-body {
-  color: white;
+*{ box-sizing:border-box; margin:0; padding:0; }
+html, body { height: 100%; }
+body{
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.6;
 }
 
-.nav {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  padding: 20px 40px;
+/* --- Page background system --- */
+.page{
+  min-height: 100vh;
   display: flex;
-  justify-content: space-between;
-  z-index: 10;
+  flex-direction: column;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 20px;
-  font-weight: 500;
+/* Different pictures per page */
+body.home .page{
+  background-image:
+    linear-gradient(120deg, rgba(255, 122, 89, .30), rgba(106, 169, 255, .25)),
+    linear-gradient(180deg, rgba(0,0,0,.60), rgba(0,0,0,.55)),
+    url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=2400&q=80");
 }
 
-.hero {
-  height: 100vh;
-  background: url("https://images.unsplash.com/photo-1501785888041-af3ef285b470") center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+body.about .page{
+  background-image:
+    linear-gradient(120deg, rgba(46, 213, 115, .22), rgba(255, 159, 67, .18)),
+    linear-gradient(180deg, rgba(0,0,0,.62), rgba(0,0,0,.55)),
+    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2400&q=80");
 }
 
-.overlay {
-  background: rgba(0,0,0,0.4);
-  padding: 40px;
-  border-radius: 12px;
+body.adventures .page{
+  background-image:
+    linear-gradient(120deg, rgba(84, 160, 255, .22), rgba(95, 39, 205, .18)),
+    linear-gradient(180deg, rgba(0,0,0,.62), rgba(0,0,0,.55)),
+    url("https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=2400&q=80");
 }
 
-h1 {
-  font-size: 64px;
+/* --- Layout --- */
+.wrap{ max-width: var(--max); margin: 0 auto; padding: 22px; width: 100%; }
+
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 18px;
+  padding-top: 18px;
+}
+
+.brand{
+  font-family: Fraunces, serif;
+  letter-spacing: .3px;
+  font-size: 22px;
+}
+
+.links a{
+  color: var(--muted);
+  text-decoration:none;
+  margin-left: 14px;
+  font-weight: 600;
+}
+.links a:hover{ color: white; text-decoration: underline; text-underline-offset: 5px; }
+
+.hero{
+  padding: 70px 0 24px;
+}
+
+h1{
+  font-family: Fraunces, serif;
+  font-size: clamp(44px, 6vw, 74px);
+  line-height: 1.05;
   margin-bottom: 10px;
 }
 
-.subtitle {
-  font-size: 24px;
-  margin-bottom: 20px;
-  opacity: 0.9;
+.subtitle{
+  font-size: clamp(18px, 2.2vw, 26px);
+  color: var(--muted);
+  margin-bottom: 16px;
 }
 
-.intro {
-  max-width: 600px;
-  font-size: 18px;
-  line-height: 1.6;
+.lede{
+  font-size: 19px;
+  max-width: 780px;
+  color: rgba(255,255,255,.88);
+}
+
+.ctaRow{ margin-top: 22px; display:flex; gap: 12px; flex-wrap: wrap; }
+.btn{
+  display:inline-block;
+  padding: 11px 14px;
+  border-radius: 12px;
+  text-decoration:none;
+  font-weight: 700;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.12);
+  color: white;
+  backdrop-filter: blur(8px);
+}
+.btn.primary{
+  background: rgba(255,255,255,.92);
+  color: #0b1220;
+  border-color: rgba(255,255,255,.25);
+}
+
+.grid{
+  display:grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 14px;
+  padding: 18px 0 40px;
+}
+
+.card{
+  grid-column: span 6;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 16px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 18px 40px rgba(0,0,0,.25);
+}
+
+.card h3{
+  font-family: Fraunces, serif;
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.card p, .card li{ color: rgba(255,255,255,.86); font-size: 16.5px; }
+.card ul{ padding-left: 18px; margin-top: 8px; }
+
+.footer{
+  margin-top: auto;
+  padding: 18px 0 24px;
+  color: rgba(255,255,255,.70);
+  font-size: 14px;
+}
+
+@media (max-width: 850px){
+  .card{ grid-column: span 12; }
 }
