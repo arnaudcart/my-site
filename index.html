@@ -1,44 +1,60 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>The Open Road</title>
-<link rel="stylesheet" href="styles.css" />
-<link rel="icon" type="image/png" href="images/logo.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Open Road</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body class="home">
-<div class="page">
+  <div class="page">
+    <div class="wrap nav">
+      <div class="brand">The Open Road</div>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="adventures.html">Adventures</a>
+      </div>
+    </div>
 
-<div class="wrap nav">
-  <a href="index.html">
-    <img src="images/logo.png" alt="The Open Road Logo" class="logo">
-  </a>
-  <div class="links">
-    <a href="about.html">About</a>
-    <a href="adventures.html">Adventures</a>
+    <main class="wrap hero">
+      <h1>The Open Road</h1>
+      <div class="subtitle">A new life…</div>
+      <p class="lede">
+        Leaving the rat race behind and choosing a minimalist life — more family time, fresh air, outside adventures,
+        healthy simple food, and the warmth of the sun.
+      </p>
+
+      <div class="ctaRow">
+        <a class="btn primary" href="about.html">Read our story</a>
+        <a class="btn" href="adventures.html">See adventures</a>
+      </div>
+    </main>
+
+    <section class="wrap grid">
+      <div class="card">
+        <h3>Why we’re doing this</h3>
+        <p>
+          We want a calmer, healthier rhythm — less stuff, more moments. Nature, movement, and time together.
+        </p>
+      </div>
+      <div class="card">
+        <h3>What’s coming</h3>
+        <ul>
+          <li>Travel journal posts</li>
+          <li>Kids’ photo gallery</li>
+          <li>Simple living tips & routines</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="wrap footer">
+      © <span id="year"></span> The Open Road
+    </footer>
   </div>
-</div>
 
-<main class="wrap hero">
-  <h1>The Open Road</h1>
-  <div class="subtitle">A new life…</div>
-  <p class="lede">
-    Choosing a calmer rhythm. More family time, fresh air, outside adventures,
-    simple healthy food, and the warmth of the sun.
-  </p>
-</main>
-
-<footer class="wrap footer">
-  © <span id="year"></span> The Open Road
-</footer>
-
-</div>
-
-<script>
-document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
