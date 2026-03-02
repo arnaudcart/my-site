@@ -1,15 +1,14 @@
-/* Google Fonts */
+/* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap");
 
 :root{
   --max: 1100px;
   --text: rgba(255,255,255,.95);
-  --muted: rgba(255,255,255,.82);
+  --muted: rgba(255,255,255,.85);
   --glass: rgba(15, 20, 30, .35);
   --border: rgba(255,255,255,.18);
 }
 
-/* Reset */
 *{
   box-sizing: border-box;
   margin: 0;
@@ -26,10 +25,7 @@ body{
   line-height: 1.6;
 }
 
-/* =============================
-   BACKGROUND SYSTEM
-   ============================= */
-
+/* PAGE WRAPPER */
 .page{
   min-height: 100vh;
   display: flex;
@@ -39,34 +35,48 @@ body{
   background-repeat: no-repeat;
 }
 
-/* HOME background */
+/* ===== Background placeholders (replace later with your images) ===== */
+
+/* HOME */
 body.home .page{
+  background:
+    linear-gradient(120deg, #1e3c72, #2a5298);
+
+  /*
   background-image:
     linear-gradient(120deg, rgba(255,140,0,.25), rgba(0,150,255,.25)),
     linear-gradient(180deg, rgba(0,0,0,.60), rgba(0,0,0,.55)),
-    url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=2400&q=80");
+    url("images/home.jpg");
+  */
 }
 
-/* ABOUT background */
+/* ABOUT */
 body.about .page{
+  background:
+    linear-gradient(120deg, #134e5e, #71b280);
+
+  /*
   background-image:
-    linear-gradient(120deg, rgba(46, 213, 115, .25), rgba(255, 159, 67, .20)),
+    linear-gradient(120deg, rgba(46,213,115,.25), rgba(255,159,67,.20)),
     linear-gradient(180deg, rgba(0,0,0,.60), rgba(0,0,0,.55)),
-    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2400&q=80");
+    url("images/about.jpg");
+  */
 }
 
-/* ADVENTURES background */
+/* ADVENTURES */
 body.adventures .page{
+  background:
+    linear-gradient(120deg, #42275a, #734b6d);
+
+  /*
   background-image:
     linear-gradient(120deg, rgba(84,160,255,.25), rgba(95,39,205,.20)),
     linear-gradient(180deg, rgba(0,0,0,.60), rgba(0,0,0,.55)),
-    url("https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=2400&q=80");
+    url("images/adventures.jpg");
+  */
 }
 
-/* =============================
-   LAYOUT
-   ============================= */
-
+/* LAYOUT */
 .wrap{
   max-width: var(--max);
   margin: 0 auto;
@@ -74,7 +84,7 @@ body.adventures .page{
   width: 100%;
 }
 
-/* Navigation */
+/* NAV */
 .nav{
   display: flex;
   align-items: center;
@@ -82,12 +92,12 @@ body.adventures .page{
   padding-top: 20px;
 }
 
-.brand{
-  font-family: "Playfair Display", serif;
-  font-size: 24px;
-  letter-spacing: .5px;
+.logo{
+  height: 65px;
+  width: auto;
 }
 
+/* LINKS */
 .links a{
   text-decoration: none;
   color: var(--muted);
@@ -102,10 +112,7 @@ body.adventures .page{
   text-underline-offset: 6px;
 }
 
-/* =============================
-   HERO SECTION
-   ============================= */
-
+/* HERO */
 .hero{
   padding: 80px 0 40px;
 }
@@ -129,7 +136,7 @@ h1{
   color: rgba(255,255,255,.9);
 }
 
-/* Buttons */
+/* BUTTONS */
 .ctaRow{
   margin-top: 28px;
   display: flex;
@@ -143,30 +150,16 @@ h1{
   text-decoration: none;
   font-weight: 700;
   border: 1px solid var(--border);
-  background: rgba(255,255,255,.12);
+  background: rgba(255,255,255,.15);
   color: white;
-  backdrop-filter: blur(10px);
   transition: 0.3s;
 }
 
 .btn:hover{
-  background: rgba(255,255,255,.25);
+  background: rgba(255,255,255,.3);
 }
 
-.btn.primary{
-  background: rgba(255,255,255,.95);
-  color: #111;
-  border-color: rgba(255,255,255,.3);
-}
-
-.btn.primary:hover{
-  background: white;
-}
-
-/* =============================
-   CONTENT CARDS
-   ============================= */
-
+/* CARDS */
 .grid{
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -181,7 +174,6 @@ h1{
   border-radius: 20px;
   padding: 22px;
   backdrop-filter: blur(12px);
-  box-shadow: 0 20px 45px rgba(0,0,0,.35);
 }
 
 .card h3{
@@ -190,40 +182,12 @@ h1{
   margin-bottom: 10px;
 }
 
-.card p,
-.card li{
+.card p, .card li{
   font-size: 17px;
-  color: rgba(255,255,255,.88);
 }
 
-.card ul{
-  padding-left: 18px;
-  margin-top: 8px;
-}
-
-/* =============================
-   FOOTER
-   ============================= */
-
+/* FOOTER */
 .footer{
   margin-top: auto;
   padding: 24px 0 30px;
-  font-size: 14px;
-  color: rgba(255,255,255,.75);
-}
-
-/* =============================
-   RESPONSIVE
-   ============================= */
-
-@media (max-width: 900px){
-  .card{
-    grid-column: span 12;
-  }
-}
-
-@media (max-width: 600px){
-  .links{
-    display: none;
-  }
-}
+  fo
