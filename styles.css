@@ -92,8 +92,8 @@ body.adventures .page{
 }
 
 .brand-logo{
-  width: 28px;      /* tweak to taste: 24–34px */
-  height: 28px;
+  width: 10px;      /* tweak to taste: 24–34px */
+  height: 10px;
   object-fit: contain;
   display: block;
 }
